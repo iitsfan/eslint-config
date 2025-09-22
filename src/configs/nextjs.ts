@@ -1,5 +1,4 @@
 import type { Config, OverridesOptions } from '../types'
-// @ts-expect-error - no type definitions
 import nextPlugin from '@next/eslint-plugin-next'
 import { GLOB_REACT } from '../globs'
 
@@ -28,8 +27,8 @@ export const nextjs = (options: OverridesOptions = {}): Config[] => {
 			},
 			rules: {
 				// Use official Next.js recommended configurations
-				...nextPlugin.configs.recommended.rules,
-				...nextPlugin.configs['core-web-vitals'].rules,
+				...nextPlugin.configs.recommended.rules as Record<string, any>,
+				...nextPlugin.configs['core-web-vitals'].rules as Record<string, any>,
 
 				...overrides,
 			},
