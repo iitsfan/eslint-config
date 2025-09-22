@@ -12,10 +12,6 @@ export const comments = (options: OverridesOptions = {}): Config[] => {
 				'eslint-comments': commentsPlugin,
 			},
 			rules: {
-				'eslint-comments/disable-enable-pair': [
-					'error',
-					{ allowWholeFile: true },
-				],
 				'eslint-comments/no-aggregating-enable': 'error',
 				'eslint-comments/no-duplicate-disable': 'error',
 				'eslint-comments/no-unlimited-disable': 'error',
