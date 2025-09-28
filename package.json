@@ -1,7 +1,7 @@
 {
 	"name": "@itsfan/eslint-config",
 	"type": "module",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "FAN is eslint flat config.",
 	"keywords": [
 		"eslint-config"
