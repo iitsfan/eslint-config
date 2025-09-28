@@ -1,6 +1,6 @@
 import type { Config, TailwindOptions } from '../types'
 import tailwind from 'eslint-plugin-better-tailwindcss'
-import { GLOB_SRC } from '../globs'
+import { GLOB_REACT, GLOB_VUE } from '../globs'
 
 export const tailwindcss = (options: TailwindOptions = {}): Config[] => {
 	const { overrides = {}, settings = {} } = options
@@ -8,7 +8,7 @@ export const tailwindcss = (options: TailwindOptions = {}): Config[] => {
 	return [
 		{
 			name: 'itsfan/tailwindcss/rules',
-			files: [GLOB_SRC],
+			files: [GLOB_REACT, GLOB_VUE],
 			plugins: {
 				'better-tailwindcss': tailwind,
 			},
